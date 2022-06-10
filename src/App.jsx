@@ -5,6 +5,7 @@ import Location from './components/Location'
 import ResidentInfo from './components/ResidentInfo'
 import useApiRickMorty from './hooks/useApiRickMorty'
 import Loader from './components/Loader'
+import Header from './components/Header'
 
 function App() {
 
@@ -12,9 +13,13 @@ const {location} = useApiRickMorty()
 
   return (
     <div className="App">
-      {/* <Loader /> */}
+      {/* Header */}
+      <Header />
+
+      {/* <Location / Dimension /> */}
       <Location location = {location}/>
 
+      {/* Cards container */}
       <div className='app__cards'>
         {location?.residents.map(resident => (
           <ResidentInfo resident={resident}
