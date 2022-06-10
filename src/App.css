@@ -88,7 +88,7 @@
 }
 
 .card__character:hover{
-    border: 8px solid rgba(255, 255, 255, 0.837);
+    border: 8px solid rgba(179, 179, 179, 0.837);
     transition: .2s;
     width: min(275px,90%);
 
