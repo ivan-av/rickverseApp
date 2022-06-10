@@ -76,7 +76,7 @@
     border-radius: 15px;
     width: min(270px,90%);
 
-    background-color: rgba(35, 11, 55, 0.443);;
+    background-color: rgba(35, 11, 55, 0.443);
 
     /* border: var(--tester-border) white; */
 }
@@ -90,7 +90,9 @@
 .card__character:hover{
     border: 8px solid rgba(255, 255, 255, 0.837);
     transition: .2s;
-    width: min(275px,90%)
+    width: min(275px,90%);
+
+    background-color: rgba(26, 8, 40, 0.571);
 }
 
 .character-info__container{
