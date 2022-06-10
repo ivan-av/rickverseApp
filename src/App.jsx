@@ -3,26 +3,19 @@ import './App.css'
 import axios from 'axios'
 import Location from './components/Location'
 import ResidentInfo from './components/ResidentInfo'
+import useApiRickMorty from './hooks/useApiRickMorty'
+import Loader from './components/Loader'
 
 function App() {
 
-  const [location, setLocation] = useState()
-
-  useEffect(() => {
-    const randomLocation = Math.ceil(Math.random() * 126)
-  
-    const URL = `https://rickandmortyapi.com/api/location/${randomLocation}`
-    axios.get(URL)
-    .then(res => setLocation(res.data))
-    .catch(err => console.log(err))
-  }, [])
-  
-  console.log(location)
+const {location} = useApiRickMorty()
 
   return (
     <div className="App">
+      {/* <Loader /> */}
       <Location location = {location}/>
-      <div>
+
+      <div className='app__cards'>
         {location?.residents.map(resident => (
           <ResidentInfo resident={resident}
           key={resident}

@@ -1,0 +1,34 @@
+.App {
+    background:linear-gradient(135deg, rgb(150, 114, 229),rgb(186, 99, 130),rgb(180, 105, 186));
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.app__cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.card__location {
+    border: 1px solid blue;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__character{
+    border: 1px solid red;
+    border-radius: 10px;
+}

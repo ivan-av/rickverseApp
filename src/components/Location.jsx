@@ -41,11 +41,12 @@ const onChangeInput = e => {
 						onChange={onChangeInput}
 						type="text" 
 						/>
+						<h2>{inputText1}</h2>
 				</form>
 
 				{/* no controled */}
 				<form onSubmit={onSubmitFunction} action="">
-							<input  type="text" />
+							<input type="text" />
 							<button>Print Text</button>
 							<h1>{inputText2}</h1>
 				</form>
