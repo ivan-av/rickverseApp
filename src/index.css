@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(78, 42, 78);
 }
 
 code {
@@ -12,6 +13,10 @@ code {
     monospace;
 }
 
-/* p {
+p {
   margin: 0;
-} */
+}
+
+h2{
+  margin: 0;
+}

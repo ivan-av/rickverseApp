@@ -66,6 +66,7 @@
 }
 
 .card__character{
+    /* padding-top: 5px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,9 +82,24 @@
 }
 
 .card__character img {
-    width: 100%;
+    width: min(50%);
     border-radius: 15px;
     filter: opacity(0.75) drop-shadow(0 0 0 rgb(0, 0, 0));
+}
+
+.card__character:hover{
+    border: 8px solid rgba(255, 255, 255, 0.837);
+    transition: .2s;
+    width: min(275px,90%)
+}
+
+.character-info__container{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 input{
