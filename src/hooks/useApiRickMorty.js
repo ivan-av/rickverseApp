@@ -1,22 +1,25 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-const useApiRickMorty = () => {
+const useApiRickMorty = searchLocation => {
 
 const [location, setLocation] = useState()
 
     useEffect(() => {
-        const randomLocation = Math.ceil(Math.random() * 126)
-
-        const URL = `https://rickandmortyapi.com/api/location/${randomLocation}`
+        let locationNumber
+        if(searchLocation === undefined){
+            locationNumber = Math.ceil(Math.random() * 126)
+        } else {
+            locationNumber = searchLocation
+        }
+        const URL = `https://rickandmortyapi.com/api/location/${locationNumber}`
+        
         axios.get(URL)
         .then(res => setLocation(res.data))
         .catch(err => console.log(err))
-    }, [])
+    }, [searchLocation])
 
-    console.log(location)
-
-    return {location}
+    return location
 }
 
 export default useApiRickMorty

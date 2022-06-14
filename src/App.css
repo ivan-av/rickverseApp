@@ -3,7 +3,7 @@
 } */
 
 .App {
-    background:repeating-linear-gradient(0deg, rgb(0, 0, 0),rgb(52, 23, 34),rgb(57, 25, 59),rgb(5, 3, 7) 20%);
+    background:repeating-linear-gradient(45deg, rgb(0, 0, 0),rgb(52, 23, 34),rgb(57, 25, 59),rgb(5, 3, 7) 100%);
     min-height: 100vh;
     
     display: flex;
@@ -30,7 +30,19 @@
     width: 100%;
     min-height: 40vh;
 
-    color: white;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    
+    font-size: 80px;
+    font-style: italic;
+    text-shadow: 6px 6px 6px green;
+    color: rgb(255, 255, 255);
+    background-color: rgba(166, 18, 192, 0.413);
 }
 
 .card__location {
@@ -47,6 +59,47 @@
 
     /* border: var(--tester-border) orange; */
 
+}
+
+.location-info__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.location-info__title {
+    font-size: 35px;
+    text-shadow: 3px 3px 3px rgb(54, 110, 71);
+}
+
+.location-info__details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 10px;
+
+    text-align: center;
+    
+}
+
+.location-info__details div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 10px;
+
+    font-size: 20px;
+
+    
+    height: 100px;
+    background-color: rgba(35, 11, 55, 0.443);
+    border: 6px solid rgba(251, 247, 255, 0.038);
+
+    border-radius: 10px;
 }
 
 .app__cards{
@@ -112,9 +165,34 @@ input{
     border: 4px solid rgb(151, 121, 182);
     border-radius: 4px;
 
+    color: rgba(0, 0, 0, 0.619);
+    font-weight: 700;
     font-size: 15px;
 }
 
 button {
     background-color: blueviolet;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 4px solid rgba(101, 9, 130, 0.455);
+
+    color: rgba(255, 255, 255, 0.715);
+    font-size: 16px;
+
+    margin-left: 5px;
 }
+
+button:hover {
+    border: 4px solid rgba(175, 170, 176, 0.455);
+    transition: 0.2s;
+    height: 43px;
+}
+
+button:active {
+    background-color: #a5a9a5;
+    box-shadow: 0 5px #666;
+    transform: translateY(2px)
+}
+
+/* location-input__button */

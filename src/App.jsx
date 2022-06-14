@@ -6,15 +6,20 @@ import ResidentInfo from './components/ResidentInfo'
 import useApiRickMorty from './hooks/useApiRickMorty'
 import Loader from './components/Loader'
 import Header from './components/Header'
+import InputSearch from './components/InputSearch'
 
 function App() {
 
-const {location} = useApiRickMorty()
+const [searchLocation, setSearchLocation] = useState()
+
+const location = useApiRickMorty(searchLocation)
 
   return (
     <div className="App">
       {/* Header */}
       <Header />
+
+      <InputSearch setSearchLocation={setSearchLocation}/>
 
       {/* <Location / Dimension /> */}
       <Location location = {location}/>
